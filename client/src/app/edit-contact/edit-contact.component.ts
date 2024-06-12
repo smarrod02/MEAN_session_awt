@@ -44,6 +44,16 @@ export class EditContactComponent implements OnInit {
   }
 
   //Task 3.2 starts...
-
+  editContact(contact:Contact){
+    this.contactService.updateContact(this.contact()._id || '',contact ).subscribe({
+      next: () =>{
+        this.router.navigate(['/']);
+      },
+      error: (error) =>{
+        alert('Failed to update contact');
+        console.error(error);
+      }
+    })
+  }
   //Task 3.2 ends
 }

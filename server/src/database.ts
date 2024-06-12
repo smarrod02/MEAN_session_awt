@@ -1,6 +1,6 @@
 import * as mongodb from "mongodb";
 //Task 1.2 continues...
-
+import { Contacts } from "./contact";
 //Task 1.2 ends.
 
 export const collections: {

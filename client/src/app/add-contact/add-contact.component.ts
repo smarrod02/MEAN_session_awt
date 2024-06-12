@@ -30,6 +30,17 @@ export class AddContactComponent {
   ) {}
 
   //Task 3.1 starts...
-  
+  addContact(contact: Contact){
+    this.contactService.createContact(contact).subscribe({
+      next: () =>{
+        this.router.navigate(['/']);
+      },
+      error: (error) =>{
+        alert('Failed to create a contact');
+        console.error(error);
+      },
+    });
+    this.contactService.getContacts();
+  }
   //Task 3.1 ends.
 }

@@ -1,10 +1,11 @@
 //Task 1.2 continues...
-
+import * as dotenv from "dotenv";
 //Task 1.2 ends.
 import express from "express";
 import cors from "cors";
 import { connectToDatabase } from "./database";
 //Task 2.2 continues...
+import { contactRouter } from "./contact.routes";
 
 //Task 2.2 ends.
 
